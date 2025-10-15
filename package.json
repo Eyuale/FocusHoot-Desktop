@@ -1,0 +1,22 @@
+{
+  "name": "focushoot-desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/main/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^38.2.2",
+    "electron-builder": "^26.0.12",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "electron-store": "^11.0.2"
+  }
+}
