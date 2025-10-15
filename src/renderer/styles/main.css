@@ -1,0 +1,163 @@
+.btn-danger:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+.btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn:disabled:hover {
+  background: #ccc;
+  transform: none;
+  box-shadow: none;
+}
+
+.info-text {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #ffcf54;
+}
+
+.info-text a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.info-text a:hover {
+  text-decoration: underline;
+}
+
+.status-info {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.status-info p {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.status-active {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #10b981;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.activity-log {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-log::-webkit-scrollbar {
+  width: 8px;
+}
+
+.activity-log::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.activity-log::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.activity-log::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.no-activity {
+  text-align: center;
+  color: #999;
+  padding: 40px 20px;
+  font-style: italic;
+}
+
+.activity-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-left: 4px solid #667eea;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.activity-item.blocked {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
+
+.activity-item.allowed {
+  border-left-color: #10b981;
+  background: #f0fdf4;
+}
+
+.activity-item .timestamp {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.activity-item .app-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.activity-item .reason {
+  font-size: 0.9em;
+  color: #555;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    border-radius: 8px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

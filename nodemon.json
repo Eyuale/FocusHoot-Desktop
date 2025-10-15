@@ -1,0 +1,9 @@
+{
+  "watch": ["src/main/**/*"],
+  "ext": "js,json",
+  "ignore": ["src/renderer/**/*", "node_modules/**/*"],
+  "exec": "electron .",
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

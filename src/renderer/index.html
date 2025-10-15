@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <title>Focus Guardian</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Focus Hoot</h1>
+    </header>
+
+    <main>
+      <!-- API Key Setup Section -->
+      <section id="setup-section" class="card">
+        <h2>Setup</h2>
+        <div class="form-group">
+          <label for="api-key">Gemini API Key:</label>
+          <input type="password" id="api-key" placeholder="Enter your Gemini API key">
+          <button id="save-key-btn" class="btn btn-primary">Save Key</button>
+        </div>
+        <p class="info-text">Get your API key from <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></p>
+      </section>
+
+      <!-- Goal Setting Section -->
+      <section id="goal-section" class="card">
+        <h2>Set Your Focus Goal</h2>
+        <div class="form-group">
+          <label for="goal-input">What do you want to focus on?</label>
+          <textarea id="goal-input" rows="3" placeholder="E.g., Complete the quarterly report, Study for exam, Work on coding project..."></textarea>
+        </div>
+        <button id="start-lockdown-btn" class="btn btn-success" disabled>Start Lockdown</button>
+      </section>
+
+      <!-- Status Section -->
+      <section id="status-section" class="card" style="display: none;">
+        <h2>Lockdown Active</h2>
+        <div class="status-info">
+          <p><strong>Current Goal:</strong> <span id="current-goal"></span></p>
+          <p><strong>Status:</strong> <span id="status-indicator" class="status-active">Active</span></p>
+        </div>
+        <button id="stop-lockdown-btn" class="btn btn-danger">Stop Lockdown</button>
+      </section>
+
+      <!-- Activity Log -->
+      <section id="activity-section" class="card">
+        <h2>Activity Log</h2>
+        <div id="activity-log" class="activity-log">
+          <p class="no-activity">No activity yet. Start a lockdown session to begin monitoring.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="scripts/renderer.js"></script>
+</body>
+</html>

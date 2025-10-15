@@ -2,9 +2,14 @@
   "name": "focushoot-desktop",
   "version": "1.0.0",
   "description": "",
-  "main": "/src/main/main.js",
+  "main": "src/main/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "dev": "nodemon",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +22,29 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "electron-store": "^11.0.2"
+    "electron-store": "^8.2.0"
+  },
+  "build": {
+    "appId": "com.focushoot.app",
+    "productName": "FocusHoot Desktop",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/icons/icon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "src/assets/icons/icon.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "src/assets/icons/icon.png"
+    }
   }
 }
